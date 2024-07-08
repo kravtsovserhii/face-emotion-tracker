@@ -1,0 +1,70 @@
+wandb_version: 1
+
+num_classes:
+  desc: null
+  value: 7
+batch_norm:
+  desc: null
+  value: true
+batch_size:
+  desc: null
+  value: 64
+learning_rate:
+  desc: null
+  value: 0.001
+epochs:
+  desc: null
+  value: 3
+train_dir:
+  desc: null
+  value: ../data/train
+test_dir:
+  desc: null
+  value: ../data/test
+metric:
+  desc: null
+  value: MulticlassAUROC()
+loss_fn:
+  desc: null
+  value: CrossEntropyLoss()
+in_channels:
+  desc: null
+  value: 3
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.7
+    cli_version: 0.17.4
+    framework: lightning
+    is_jupyter_run: true
+    is_kaggle_kernel: true
+    start_time: 1720390677
+    t:
+      1:
+      - 1
+      - 5
+      - 9
+      - 41
+      - 53
+      - 55
+      - 103
+      2:
+      - 1
+      - 5
+      - 9
+      - 41
+      - 53
+      - 55
+      - 103
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.11.7
+      5: 0.17.4
+      8:
+      - 1
+      - 2
+      - 3
+      - 5
+      13: windows-amd64

@@ -1,0 +1,33 @@
+2024-07-08 01:17:57,066 INFO    MainThread:23780 [wandb_setup.py:_flush():76] Current SDK version is 0.17.4
+2024-07-08 01:17:57,066 INFO    MainThread:23780 [wandb_setup.py:_flush():76] Configure stats pid to 23780
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_setup.py:_flush():76] Loading settings from C:\Users\serhii.kravtsov\.config\wandb\settings
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_setup.py:_flush():76] Loading settings from d:\projects\face-emotion-tracker\notebooks\wandb\settings
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_init.py:_log_setup():529] Logging user logs to d:\projects\face-emotion-tracker\notebooks\wandb\run-20240708_011757-4zba64kp\logs\debug.log
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_init.py:_log_setup():530] Logging internal logs to d:\projects\face-emotion-tracker\notebooks\wandb\run-20240708_011757-4zba64kp\logs\debug-internal.log
+2024-07-08 01:17:57,067 INFO    MainThread:23780 [wandb_init.py:_jupyter_setup():475] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001757FDEAF10>
+2024-07-08 01:17:57,068 INFO    MainThread:23780 [wandb_init.py:init():569] calling init triggers
+2024-07-08 01:17:57,068 INFO    MainThread:23780 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {'num_classes': 7, 'batch_norm': True, 'batch_size': 64, 'learning_rate': 0.001, 'epochs': 3, 'train_dir': '../data/train', 'test_dir': '../data/test', 'metric': MulticlassAUROC(), 'loss_fn': CrossEntropyLoss(), 'in_channels': 3}
+2024-07-08 01:17:57,068 INFO    MainThread:23780 [wandb_init.py:init():619] starting backend
+2024-07-08 01:17:57,068 INFO    MainThread:23780 [wandb_init.py:init():623] setting up manager
+2024-07-08 01:17:57,069 INFO    MainThread:23780 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-07-08 01:17:57,073 INFO    MainThread:23780 [wandb_init.py:init():631] backend started and connected
+2024-07-08 01:17:57,076 INFO    MainThread:23780 [wandb_run.py:_label_probe_notebook():1334] probe notebook
+2024-07-08 01:17:57,076 INFO    MainThread:23780 [wandb_run.py:_label_probe_notebook():1344] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-07-08 01:17:57,077 INFO    MainThread:23780 [wandb_init.py:init():720] updated telemetry
+2024-07-08 01:17:57,078 INFO    MainThread:23780 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-07-08 01:17:57,591 INFO    MainThread:23780 [wandb_run.py:_on_init():2402] communicating current version
+2024-07-08 01:17:57,773 INFO    MainThread:23780 [wandb_run.py:_on_init():2411] got version response 
+2024-07-08 01:17:57,774 INFO    MainThread:23780 [wandb_init.py:init():804] starting run threads in backend
+2024-07-08 01:17:57,989 INFO    MainThread:23780 [wandb_run.py:_console_start():2380] atexit reg
+2024-07-08 01:17:57,989 INFO    MainThread:23780 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2024-07-08 01:17:57,990 INFO    MainThread:23780 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2024-07-08 01:17:57,990 INFO    MainThread:23780 [wandb_run.py:_redirect():2325] Redirects installed.
+2024-07-08 01:17:57,993 INFO    MainThread:23780 [wandb_init.py:init():847] run started, returning control to user process
+2024-07-08 01:22:01,984 INFO    MainThread:23780 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-07-08 01:22:01,985 INFO    MainThread:23780 [wandb_init.py:_pause_backend():440] pausing backend
