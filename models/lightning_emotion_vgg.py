@@ -37,17 +37,19 @@ class EmotionVGG(pl.LightningModule):
 
     def __init__(self, config=None):
         super(EmotionVGG, self).__init__()
-        self.loss_fn = config.get('loss_fn', nn.CrossEntropyLoss(weight=torch.tensor([1.0266, 9.4066, 1.0010, 0.5684, 0.8260, 0.8491, 1.2934])))
+        self.loss_fn = config.get('loss_fn', nn.CrossEntropyLoss(weight=torch.tensor([0.00027716, 0.00030826, 0.00028802, 0.00032862, 0.00023063,
+       0.00034953, 0.00033389, 0.00021664])))
         self.batch_norm = config.get('batch_norm', True)
         self.num_classes = config.get('num_classes', 7)
         self.metric = config.get('metric', torchmetrics.AUROC(num_classes=self.num_classes, task='multiclass'))
         self.in_channels = config.get('in_channels', 3)
         self.learning_rate = config.get('learning_rate', 0.001)
         self.features = nn.Sequential(
-            VGGBlock(self.in_channels, 64, 2, batch_norm=self.batch_norm),    # 2 Conv layers with 64 filters output size 24x24x64
-            VGGBlock(64, 128, 2, batch_norm=self.batch_norm),  # 2 Conv layers with 128 filters output size 12x12x128
-            VGGBlock(128, 256, 3, batch_norm=self.batch_norm), # 3 Conv layers with 256 filters output size 6x6x256
-            VGGBlock(256, 512, 3, batch_norm=self.batch_norm), # 3 Conv layers with 512 filters output size 3x3x512
+            VGGBlock(self.in_channels, 64, 2, batch_norm=self.batch_norm),  
+            VGGBlock(64, 128, 2, batch_norm=self.batch_norm),  
+            VGGBlock(128, 256, 3, batch_norm=self.batch_norm), 
+            VGGBlock(256, 512, 3, batch_norm=self.batch_norm), 
+            VGGBlock(512, 512, 3, batch_norm=self.batch_norm),
         )
         self.classifier = nn.Sequential(
             nn.Linear(512 * 3 * 3, 1024),
