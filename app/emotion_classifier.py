@@ -6,6 +6,7 @@ from models import lightning_effnet
 class EmotionClassifier:
     def __init__(self):
         self.model = lightning_effnet.EmotionClassifier.load_from_checkpoint('models/emotion_classification_model.ckpt', config={}, map_location=torch.device('cpu'))
+        self.model.eval()
         self.transform = transforms.Compose([
             transforms.ToTensor(),
             transforms.Resize((224, 224)),
